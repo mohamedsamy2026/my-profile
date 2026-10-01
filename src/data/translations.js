@@ -21,7 +21,7 @@ const en = {
 
   work: 'View My Work',
   talk: "Let's Talk",
-  based: 'Based in Egypt',
+  based: 'Beni Suef, Egypt',
 
   aboutT: 'Building modern web experiences with clean code and great design.',
 
@@ -112,13 +112,13 @@ const ar = {
 
   hi: 'أهلاً، أنا',
   first: 'محمد',
-  last: 'سامي',
+  last: 'سامى',
   role: 'مطور واجهات أمامية',
   tag: 'أحوّل الأفكار إلى تجارب رقمية حديثة.',
 
   work: 'شاهد أعمالي',
   talk: 'تواصل معي',
-  based: 'مصر',
+  based: 'بني سويف، مصر',
 
   aboutT: 'أبني تجارب ويب حديثة بكود نظيف وتصميم متقن.',
 
