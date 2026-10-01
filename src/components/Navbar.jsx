@@ -1,5 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
+import {
+  faSun,
+  faMoon,
+  faBars,
+  faXmark,
+} from "@fortawesome/free-solid-svg-icons";
 
 import { useEffect, useState } from "react";
 export const IDS = [
@@ -20,8 +25,8 @@ export function Toggles({ lang, setLang, theme, setTheme }) {
         className="rounded-lg border border-bd px-2.5 py-1.5 text-sm font-semibold"
         aria-label="Toggle language"
       >
-        <span className={lang === "en" ? "text-ac" : "text-mu"}>EN</span> /{" "}
-        <span className={lang === "ar" ? "text-ac" : "text-mu"}>AR</span>
+        <span className={lang === "en" ? "text-ac" : "text-tx"}>EN</span> /{" "}
+        <span className={lang === "ar" ? "text-ac" : "text-tx"}>AR</span>
       </button>
       <button
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -37,7 +42,7 @@ export function Toggles({ lang, setLang, theme, setTheme }) {
 export default function Navbar(p) {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("home");
-  
+
   useEffect(() => {
     const f = () => {
       let cur = "home";
@@ -52,10 +57,9 @@ export default function Navbar(p) {
     return () => removeEventListener("scroll", f);
   }, []);
 
-
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all border-b border-bd bg-bg/70 backdrop-blur-xl`}
+      className={`fixed inset-x-0 top-0 z-50 transition-all border-b border-bd bg-bg/70 backdrop-blur-2xl`}
     >
       <nav
         className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5"
@@ -87,12 +91,12 @@ export default function Navbar(p) {
           </a>
           {/* Mobile */}
           <button
-            className="grid h-9 w-9 place-items-center rounded-lg border border-bd lg:hidden"
+            className="grid h-[38px] w-[38px] place-items-center rounded-lg border-2 border-bd lg:hidden"
             onClick={() => setOpen(!open)}
             aria-expanded={open}
             aria-label="Menu"
           >
-            {open ? "✕" : "☰"}
+            <FontAwesomeIcon icon={open ? faXmark : faBars} />
           </button>
         </div>
       </nav>

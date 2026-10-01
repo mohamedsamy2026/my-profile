@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 :root {
-  --bg: #fbfaf7;
+  --bg: #f5f6fa;
   --sf: #ffffff;
   --tx: #0f1424;
   --mu: #5b6275;

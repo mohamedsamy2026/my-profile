@@ -37,10 +37,13 @@ export default function App() {
       localStorage.setItem("theme", theme);
     } catch {}
   }, [lang, theme]);
+
+
   useEffect(() => {
     const id = setTimeout(() => setReady(true), 900);
     return () => clearTimeout(id);
   }, []);
+
   useEffect(() => {
     const io = new IntersectionObserver(
       (es) =>
@@ -49,7 +52,8 @@ export default function App() {
     );
     document.querySelectorAll(".rv").forEach((el) => io.observe(el));
     return () => io.disconnect();
-  });
+  },[]);
+
   const ui = { lang, setLang, theme, setTheme, t };
   return (
     <>
