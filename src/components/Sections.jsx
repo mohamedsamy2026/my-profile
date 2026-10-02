@@ -27,10 +27,11 @@ export const About = ({ t }) => (
         <p className="mt-4 text-mu">{t.aboutP}</p>
       </div>
       <div className="grid grid-cols-3 gap-3">
-        {t.stats.map(([n, l],i) => (
-          <div key={l} className="card rv p-4 text-center cursor-pointer">
+        {t.stats.map(([n, l, d]) => (
+          <div key={l} className="card rv p-6 text-center cursor-pointer flex flex-col justify-between">
             <div className="text-3xl font-extrabold text-ac">{n}</div>
             <div className="mt-1 text-xs text-mu">{l}</div>
+            <div className="mt-3 text-xs text-mu font-semibold">{d}</div>
           </div>
         ))}
       </div>
