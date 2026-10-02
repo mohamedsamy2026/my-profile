@@ -17,6 +17,7 @@ const Sec = ({ id, title, children, alt }) => (
   </section>
 );
 
+
 export const About = ({ t }) => (
   <Sec id="about" alt>
     <div className="grid items-center gap-10 lg:grid-cols-[1.3fr_1fr]">
