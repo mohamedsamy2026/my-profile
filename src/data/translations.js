@@ -34,6 +34,7 @@ const en = {
   ],
 
   what: 'What I Do',
+  about: 'About Me',
 
   whatItems: [
     [
@@ -131,6 +132,7 @@ const ar = {
   ],
 
   what: 'ماذا أقدّم',
+  about: 'نبذه عن',
 
   whatItems: [
     [

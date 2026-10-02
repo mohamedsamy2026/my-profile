@@ -52,7 +52,7 @@ export default function App() {
     );
     document.querySelectorAll(".rv").forEach((el) => io.observe(el));
     return () => io.disconnect();
-  },[]);
+  });
 
   const ui = { lang, setLang, theme, setTheme, t };
   return (

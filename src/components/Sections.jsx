@@ -17,18 +17,16 @@ const Sec = ({ id, title, children, alt }) => (
   </section>
 );
 
-
 export const About = ({ t }) => (
-  <Sec id="about" alt>
+  <Sec id="about" alt title={`1 — ${t.about}`}>
     <div className="grid items-center gap-10 lg:grid-cols-[1.3fr_1fr]">
       <div className="rv">
-        <p className="mb-2 text-sm text-ac">01 — {t.nav[1]}</p>
         <h2 className="text-3xl font-extrabold sm:text-4xl">{t.aboutT}</h2>
         <p className="mt-4 text-mu">{t.aboutP}</p>
       </div>
       <div className="grid grid-cols-3 gap-3">
         {t.stats.map(([n, l]) => (
-          <div key={l} className="card rv p-4 text-center">
+          <div key={l} className="card rv p-4 text-center cursor-pointer">
             <div className="text-3xl font-extrabold text-ac">{n}</div>
             <div className="mt-1 text-xs text-mu">{l}</div>
           </div>
@@ -39,10 +37,10 @@ export const About = ({ t }) => (
 );
 
 export const WhatIDo = ({ t }) => (
-  <Sec id="what" title={`02 — ${t.what}`}>
+  <Sec id="what" title={`2 — ${t.what}`}>
     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
       {t.whatItems.map(([h, d], i) => (
-        <div key={h} className="card rv p-6">
+        <div key={i} className="card rv p-6">
           <span className="text-sm text-ac">0{i + 1}</span>
           <div className="my-3 text-2xl">{["◈", "▭", "⚙", "✦"][i]}</div>
           <h3 className="font-bold">{h}</h3>
@@ -150,7 +148,7 @@ export const Journey = ({ t }) => (
   <Sec id="journey" title={`06 — ${t.journey}`}>
     <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {t.journeyItems.map((j, i) => (
-        <li key={j} className="card rv flex items-center gap-4 p-5">
+        <li key={i} className="card rv flex items-center gap-4 p-5">
           <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-ac text-sm font-bold text-ac">
             0{i + 1}
           </span>
