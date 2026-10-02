@@ -45,7 +45,7 @@ export default function Hero({ t }) {
         <div className="relative mx-auto w-full max-w-md">
           <div className="overflow-hidden rounded-3xl border-2 border-bd shadow-2xl shadow-ac/20">
             <img
-              src="/assets/mohamed-samy-hero.png"
+              src="/assets/mohamed-samy-hero.webp"
               alt="Mohamed Samy, frontend developer, at his desk"
               className="aspect-[4/5] w-full object-cover object-top"
             />
