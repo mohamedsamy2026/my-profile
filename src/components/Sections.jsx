@@ -8,7 +8,9 @@ const Sec = ({ id, title, children, alt }) => (
   <section id={id} className={`py-20 ${alt ? "bg-sf/40" : ""}`}>
     <div className="mx-auto max-w-6xl px-5">
       {title && (
-        <h2 className="rv mb-10 text-3xl font-extrabold sm:text-4xl">
+        <h2
+          className={`rv mb-10 text-3xl font-extrabold sm:text-4xl ${alt ? "text-ac" : ""}`}
+        >
           {title}
         </h2>
       )}
@@ -25,7 +27,7 @@ export const About = ({ t }) => (
         <p className="mt-4 text-mu">{t.aboutP}</p>
       </div>
       <div className="grid grid-cols-3 gap-3">
-        {t.stats.map(([n, l]) => (
+        {t.stats.map(([n, l],i) => (
           <div key={l} className="card rv p-4 text-center cursor-pointer">
             <div className="text-3xl font-extrabold text-ac">{n}</div>
             <div className="mt-1 text-xs text-mu">{l}</div>

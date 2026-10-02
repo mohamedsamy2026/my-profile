@@ -28,8 +28,8 @@ const en = {
   aboutP: 'Mohamed Samy has been learning and building in web development for around 4 years. He focuses on frontend development and creates websites, platforms, dashboards, e-commerce interfaces and responsive experiences — working on real projects with clean design and practical implementation.',
 
   stats: [
-    ['4+', 'Years Learning'],
-    ['4–5', 'Projects'],
+    ['3+', 'Years of Experience'],
+    ['10–15', 'Projects'],
     ['3', 'Core Technology Areas']
   ],
 
@@ -126,9 +126,9 @@ const ar = {
   aboutP: 'يتعلم محمد سامي ويبني في مجال تطوير الويب منذ حوالي 4 سنوات. يركّز على تطوير الواجهات الأمامية، ويصنع مواقع ومنصات ولوحات تحكم وواجهات متاجر إلكترونية وتجارب متجاوبة، مع الاهتمام بالتصميم النظيف والتنفيذ العملي في مشاريع حقيقية.',
 
   stats: [
-    ['+4', 'سنوات تعلّم'],
-    ['4–5', 'مشاريع'],
-    ['3', 'مجالات تقنية أساسية']
+    ['+3', 'سنوات خبرة'],
+    ['10–15', 'مشاريع'],
+    ['5+', 'تقنيات أستخدمها']
   ],
 
   what: 'ماذا أقدّم',
