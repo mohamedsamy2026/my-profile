@@ -85,7 +85,7 @@ export default function Navbar(p) {
           <Toggles {...p} />
           <a
             href="#contact"
-            className="btn btn-p hidden !py-2 text-sm md:inline-flex"
+            className="btn btn-p !hidden !py-2 text-sm md:!inline-flex"
           >
             {p.t.cta}
           </a>

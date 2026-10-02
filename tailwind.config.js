@@ -2,6 +2,9 @@ export default {
   content: ['./index.html', './src/**/*.{js,jsx}'],
   theme: {
     extend: {
+      screens: {
+        xs: "480px",
+      },
       colors: { bg: 'var(--bg)', sf: 'var(--sf)', tx: 'var(--tx)', mu: 'var(--mu)', bd: 'var(--bd)', ac: 'var(--ac)' },
       fontFamily: { sans: ['Inter', 'Cairo', 'system-ui', 'sans-serif'] },
       keyframes: { marquee: { to: { transform: 'translateX(-50%)' } }, float: { '50%': { transform: 'translateY(-10px)' } } },

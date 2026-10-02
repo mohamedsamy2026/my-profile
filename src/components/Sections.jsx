@@ -26,7 +26,7 @@ export const About = ({ t }) => (
         <h2 className="text-3xl font-extrabold sm:text-4xl">{t.aboutT}</h2>
         <p className="mt-4 text-mu">{t.aboutP}</p>
       </div>
-      <div className="grid grid-cols-3 gap-3">
+      <div className="grid  grid-cols-1 xs:grid-cols-3 gap-3">
         {t.stats.map(([n, l, d]) => (
           <div key={l} className="card rv p-6 text-center cursor-pointer flex flex-col justify-between">
             <div className="text-3xl font-extrabold text-ac">{n}</div>

@@ -38,7 +38,6 @@ export default function App() {
     } catch {}
   }, [lang, theme]);
 
-
   useEffect(() => {
     const id = setTimeout(() => setReady(true), 900);
     return () => clearTimeout(id);
@@ -46,12 +45,31 @@ export default function App() {
 
   useEffect(() => {
     const io = new IntersectionObserver(
-      (es) =>
-        es.forEach((e) => e.isIntersecting && e.target.classList.add("in")),
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in");
+            io.unobserve(entry.target);
+          }
+        });
+      },
       { threshold: 0.12 },
     );
-    document.querySelectorAll(".rv").forEach((el) => io.observe(el));
-    return () => io.disconnect();
+
+    const observeElements = () => {
+      document.querySelectorAll(".rv:not(.in)").forEach((el) => {
+        io.observe(el);
+      });
+    };
+
+    observeElements();
+
+    const timer = setTimeout(observeElements, 100);
+
+    return () => {
+      clearTimeout(timer);
+      io.disconnect();
+    };
   });
 
   const ui = { lang, setLang, theme, setTheme, t };
