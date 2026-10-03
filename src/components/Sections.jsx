@@ -103,10 +103,10 @@ export const Services = ({ t, lang }) => (
         <div key={i} className="card rv py-5 px-3 cursor-pointer">
           <div className="flex items-center justify-between">
             <span
-              className="grid h-10 w-10 place-items-center rounded-lg bg-ac/15 text-ac"
+              className="grid h-10 w-10 text-[22.5px] place-items-center rounded-lg bg-ac/15 text-ac"
               dir="ltr"
             >
-              {s.icon}
+              <FontAwesomeIcon icon={s.icon} />
             </span>
             <span className="text-[16.5px] text-tx font-bold">{i + 1}</span>
           </div>

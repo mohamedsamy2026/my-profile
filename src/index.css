@@ -24,7 +24,7 @@ body {
   background: var(--bg);
   color: var(--tx);
   font-family: Inter, Cairo, sans-serif;
-  overflow-x: clip;
+  overflow-x: hidden;
   transition:
     background 0.3s,
     color 0.3s;
