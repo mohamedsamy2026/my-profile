@@ -121,7 +121,7 @@ export const Services = ({ t, lang }) => (
 function Shot({ src, label }) {
   const [bad, setBad] = useState(false);
   return bad ? (
-    <div className="grid aspect-video place-items-center bg-gradient-to-br from-ac/20 to-transparent text-xs text-mu">
+    <div className="grid aspect-video place-items-center bg-gradient-to-br from-ac/20 t o-transparent text-xs text-mu">
       Replace {src}
     </div>
   ) : (
