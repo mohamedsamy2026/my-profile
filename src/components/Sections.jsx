@@ -1,3 +1,11 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faDesktop,
+  faMobileScreenButton,
+  faCode,
+  faWandMagicSparkles,
+} from "@fortawesome/free-solid-svg-icons";
+
 import { useEffect, useState } from "react";
 import skills from "../data/skills.js";
 import services from "../data/services.js";
@@ -28,7 +36,10 @@ export const About = ({ t }) => (
       </div>
       <div className="grid  grid-cols-1 xs:grid-cols-3 gap-3">
         {t.stats.map(([n, l, d]) => (
-          <div key={l} className="card rv p-6 text-center cursor-pointer flex flex-col justify-between">
+          <div
+            key={l}
+            className="card rv p-6 text-center cursor-pointer flex flex-col justify-between"
+          >
             <div className="text-3xl font-extrabold text-ac">{n}</div>
             <div className="mt-1 text-xs text-mu">{l}</div>
             <div className="mt-3 text-xs text-mu font-semibold">{d}</div>
@@ -41,11 +52,19 @@ export const About = ({ t }) => (
 
 export const WhatIDo = ({ t }) => (
   <Sec id="what" title={`2 — ${t.what}`}>
-    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+    <div className="grid gap-4 xs:grid-cols-2 lg:grid-cols-4">
       {t.whatItems.map(([h, d], i) => (
-        <div key={i} className="card rv p-6">
-          <span className="text-sm text-ac">0{i + 1}</span>
-          <div className="my-3 text-2xl">{["◈", "▭", "⚙", "✦"][i]}</div>
+        <div key={h} className="card rv p-6 cursor-pointer">
+          <span className="text-[16.5px] text-tx font-bold">{i + 1}</span>
+          <div className="my-3 text-[28px] text-ac">
+            <FontAwesomeIcon
+              icon={
+                [faDesktop, faMobileScreenButton, faCode, faWandMagicSparkles][
+                  i
+                ]
+              }
+            />
+          </div>
           <h3 className="font-bold">{h}</h3>
           <p className="mt-2 text-sm text-mu">{d}</p>
         </div>
@@ -55,25 +74,25 @@ export const WhatIDo = ({ t }) => (
 );
 
 export const Skills = ({ t }) => (
-  <Sec id="skills" title={`03 — ${t.skills}`} alt>
+  <Sec id="skills" title={`3 — ${t.skills}`} alt>
     <div
       dir="ltr"
       className="group overflow-hidden [mask-image:linear-gradient(90deg,transparent,#000_10%,#000_90%,transparent)]"
     >
       <div className="flex w-max animate-marquee gap-3 group-hover:[animation-play-state:paused]">
         {[...skills, ...skills].map((s, i) => (
-          <span
+          <div
             key={i}
-            className="card whitespace-nowrap !rounded-full px-6 py-3 text-sm font-semibold"
+            className="card flex items-center gap-3 whitespace-nowrap !rounded-xl px-5 py-4"
           >
-            {s}
-          </span>
+            <img src={s.icon} alt="" className="h-8 w-8 object-contain" />
+            <span className="text-sm font-semibold">{s.name}</span>
+          </div>
         ))}
       </div>
     </div>
   </Sec>
 );
-
 export const Services = ({ t, lang }) => (
   <Sec id="services" title={`04 — ${t.services}`}>
     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

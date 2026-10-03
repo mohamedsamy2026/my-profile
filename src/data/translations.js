@@ -28,7 +28,7 @@ const en = {
   aboutP: 'Mohamed Samy has been learning and building in web development for around 4 years. He focuses on frontend development and creates websites, platforms, dashboards, e-commerce interfaces and responsive experiences — working on real projects with clean design and practical implementation.',
 
   stats: [
-    ['3+', 'Years of Experience', 'Building real-world frontend projects'],
+    ['4+', 'Years of Experience', 'Building real-world frontend projects'],
     ['10–15', 'Projects', 'Websites, dashboards & web applications'],
     ['5+', 'Technologies', 'Modern tools for frontend development']
   ],
@@ -38,20 +38,20 @@ const en = {
 
   whatItems: [
     [
-      'Modern Interfaces',
-      'Clean, beautiful and consistent user interfaces.'
+      'Modern UI Development',
+      'Building clean, modern and visually polished user interfaces.'
     ],
     [
-      'Responsive Experiences',
-      'Layouts that feel right on every screen.'
+      'Responsive Development',
+      'Creating seamless experiences across mobile, tablet and desktop.'
     ],
     [
-      'Real-world Web Projects',
-      'Practical builds, from idea to implementation.'
+      'Real-world Web Applications',
+      'Developing practical websites, dashboards and web applications.'
     ],
     [
-      'Interactive Web Experiences',
-      'Motion and details that bring pages to life.'
+      'Interactive Experiences',
+      'Adding smooth interactions and thoughtful details that improve usability.'
     ]
   ],
 
@@ -126,7 +126,7 @@ const ar = {
   aboutP: 'يتعلم محمد سامي ويبني في مجال تطوير الويب منذ حوالي 4 سنوات. يركّز على تطوير الواجهات الأمامية، ويصنع مواقع ومنصات ولوحات تحكم وواجهات متاجر إلكترونية وتجارب متجاوبة، مع الاهتمام بالتصميم النظيف والتنفيذ العملي في مشاريع حقيقية.',
 
   stats: [
-    ['+3', 'سنوات خبرة', 'بناء مشاريع واجهات أمامية حقيقية'],
+    ['+4', 'سنوات خبرة', 'بناء مشاريع واجهات أمامية حقيقية'],
     ['10–15', 'مشروع', 'مواقع ومنصات ولوحات تحكم وتطبيقات ويب'],
     ['5+', 'تقنيات أستخدمها', 'أدوات حديثة لتطوير الواجهات الأمامية']
   ],
@@ -136,23 +136,22 @@ const ar = {
 
   whatItems: [
     [
-      'واجهات حديثة',
-      'واجهات مستخدم نظيفة وجميلة ومتناسقة.'
+      'تطوير واجهات عصرية',
+      'بناء واجهات مستخدم نظيفة وحديثة ومتناسقة بصريًا.'
     ],
     [
-      'تجارب متجاوبة',
-      'تصاميم مريحة على كل الشاشات.'
+      'تطوير متجاوب',
+      'تجارب سلسة ومتناسقة على الموبايل والتابلت والكمبيوتر.'
     ],
     [
-      'مشاريع ويب حقيقية',
-      'تنفيذ عملي من الفكرة حتى الإطلاق.'
+      'تطبيقات ويب حقيقية',
+      'تطوير مواقع ولوحات تحكم وتطبيقات ويب عملية وقابلة للاستخدام.'
     ],
     [
       'تجارب تفاعلية',
-      'حركة وتفاصيل تمنح الصفحات حياة.'
+      'إضافة تفاعلات سلسة وتفاصيل مدروسة لتحسين تجربة المستخدم.'
     ]
   ],
-
   skills: 'المهارات',
   services: 'الخدمات',
   projects: 'أبرز المشاريع',
