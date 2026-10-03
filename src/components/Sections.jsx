@@ -79,7 +79,7 @@ export const Skills = ({ t }) => (
   <Sec id="skills" title={`3 — ${t.skills}`} alt>
     <div
       dir="ltr"
-      className="group py-[3.9px] [mask-image:linear-gradient(90deg,transparent,#000_10%,#000_90%,transparent)]"
+      className="group overflow-hidden py-[3.9px] [mask-image:linear-gradient(90deg,transparent,#000_10%,#000_90%,transparent)]"
     >
       <div className="flex w-max animate-marquee gap-3 group-hover:[animation-play-state:paused] cursor-pointer">
         {[...skills, ...skills].map((s, i) => (
@@ -97,10 +97,10 @@ export const Skills = ({ t }) => (
 );
 
 export const Services = ({ t, lang }) => (
-  <Sec id="services" title={`04 — ${t.services}`}>
-    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+  <Sec id="services" title={`4 — ${t.services}`}>
+    <div className="grid gap-4 xs:grid-cols-2 lg:grid-cols-4">
       {services.map((s, i) => (
-        <div key={i} className="card rv p-5">
+        <div key={i} className="card rv py-5 px-3 cursor-pointer">
           <div className="flex items-center justify-between">
             <span
               className="grid h-10 w-10 place-items-center rounded-lg bg-ac/15 text-ac"
@@ -108,10 +108,10 @@ export const Services = ({ t, lang }) => (
             >
               {s.icon}
             </span>
-            <span className="text-xs text-mu">0{i + 1}</span>
+            <span className="text-[16.5px] text-tx font-bold">{i + 1}</span>
           </div>
           <h3 className="mt-4 font-bold">{s[lang][0]}</h3>
-          <p className="mt-1 text-sm text-mu">{s[lang][1]}</p>
+          <p className="mt-1 font-medium text-sm text-mu">{s[lang][1]}</p>
         </div>
       ))}
     </div>
