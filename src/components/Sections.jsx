@@ -12,12 +12,14 @@ import services from "../data/services.js";
 import projects from "../data/projects.js";
 import testimonials from "../data/testimonials.js";
 
-const Sec = ({ id, title, children, alt }) => (
+const Sec = ({ id, title, children, alt , accentTitle }) => (
   <section id={id} className={`py-20 ${alt ? "bg-sf/40" : ""}`}>
     <div className="mx-auto max-w-6xl px-5">
       {title && (
         <h2
-          className={`rv mb-10 text-3xl font-extrabold sm:text-4xl ${alt ? "text-ac" : ""}`}
+          className={`rv mb-10 text-3xl font-extrabold sm:text-4xl ${
+            accentTitle ? "text-ac" : ""
+          }`}
         >
           {title}
         </h2>
@@ -28,7 +30,7 @@ const Sec = ({ id, title, children, alt }) => (
 );
 
 export const About = ({ t }) => (
-  <Sec id="about" alt title={`1 — ${t.about}`}>
+  <Sec id="about" alt title={`1 — ${t.about}`} accentTitle>
     <div className="grid items-center gap-10 lg:grid-cols-[1.3fr_1fr]">
       <div className="rv">
         <h2 className="text-3xl font-extrabold sm:text-4xl">{t.aboutT}</h2>
@@ -77,9 +79,9 @@ export const Skills = ({ t }) => (
   <Sec id="skills" title={`3 — ${t.skills}`} alt>
     <div
       dir="ltr"
-      className="group overflow-hidden [mask-image:linear-gradient(90deg,transparent,#000_10%,#000_90%,transparent)]"
+      className="group py-[3.9px] [mask-image:linear-gradient(90deg,transparent,#000_10%,#000_90%,transparent)]"
     >
-      <div className="flex w-max animate-marquee gap-3 group-hover:[animation-play-state:paused]">
+      <div className="flex w-max animate-marquee gap-3 group-hover:[animation-play-state:paused] cursor-pointer">
         {[...skills, ...skills].map((s, i) => (
           <div
             key={i}
@@ -93,6 +95,7 @@ export const Skills = ({ t }) => (
     </div>
   </Sec>
 );
+
 export const Services = ({ t, lang }) => (
   <Sec id="services" title={`04 — ${t.services}`}>
     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
