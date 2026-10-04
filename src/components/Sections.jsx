@@ -5,6 +5,11 @@ import {
   faCode,
   faWandMagicSparkles,
   faArrowUpRightFromSquare,
+  faBookOpen,
+  faCompass,
+  faLaptopCode,
+  faUsers,
+  faRocket,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
@@ -13,6 +18,15 @@ import skills from "../data/skills.js";
 import services from "../data/services.js";
 import projects from "../data/projects.js";
 import testimonials from "../data/testimonials.js";
+
+const journeyIcons = [
+  faBookOpen,
+  faCode,
+  faCompass,
+  faLaptopCode,
+  faUsers,
+  faRocket,
+];
 
 const Sec = ({ id, title, children, alt, accentTitle }) => (
   <section id={id} className={`py-20 ${alt ? "bg-sf/40" : ""}`}>
@@ -141,7 +155,10 @@ export const Projects = ({ t, lang }) => (
   <Sec id="projects" title={`5 — ${t.projects}`} alt>
     <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       {projects.map((p, i) => (
-        <article key={i} className="card rv group overflow-hidden cursor-pointer">
+        <article
+          key={i}
+          className="card rv group overflow-hidden cursor-pointer"
+        >
           <div className="overflow-hidden">
             <Shot src={p.img} label={p[lang][0]} />
           </div>
@@ -187,14 +204,22 @@ export const Projects = ({ t, lang }) => (
 );
 
 export const Journey = ({ t }) => (
-  <Sec id="journey" title={`06 — ${t.journey}`}>
-    <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+  <Sec id="journey" title={`6 — ${t.journey}`}>
+    <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 ">
       {t.journeyItems.map((j, i) => (
-        <li key={i} className="card rv flex items-center gap-4 p-5">
-          <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-ac text-sm font-bold text-ac">
-            0{i + 1}
+        <li
+          key={i}
+          className="card rv flex items-center gap-4 p-5 cursor-pointer"
+        >
+          <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-ac text-[18px] font-bold text-ac">
+            {i + 1}
           </span>
+
           <span className="font-medium">{j}</span>
+          <FontAwesomeIcon
+            icon={journeyIcons[i]}
+            className="text-[19px] text-ac"
+          />
         </li>
       ))}
     </ol>
