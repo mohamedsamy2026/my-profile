@@ -149,8 +149,8 @@ export const Projects = ({ t, lang }) => (
             <h3 className="font-bold">
               {i + 1} — {p[lang][0]}
             </h3>
-            <p className="mt-2 text-sm text-mu">{p[lang][1]}</p>
-            <div className="mt-3 flex flex-wrap gap-2">
+            <p className="mt-2.5 text-sm text-mu">{p[lang][1]}</p>
+            <div className="mt-4 flex flex-wrap gap-2">
               {p.tags.map((g) => (
                 <span
                   key={g}
@@ -160,9 +160,10 @@ export const Projects = ({ t, lang }) => (
                 </span>
               ))}
             </div>
-            <div className="mt-4 flex gap-5 text-sm font-semibold text-ac">
+            <div className="mt-5 flex gap-5 text-sm font-semibold text-ac">
               <a
                 href={p.live}
+                target="_blank"
                 className="inline-flex items-center gap-1.5 duration-300 border border-ac rounded-lg py-1.5 px-3 hover:bg-ac hover:text-white"
               >
                 {t.demo}
@@ -171,6 +172,7 @@ export const Projects = ({ t, lang }) => (
 
               <a
                 href={p.github}
+                target="_blank"
                 className="inline-flex items-center gap-1.5 duration-300 border border-ac rounded-lg py-1.5 px-3 hover:bg-ac hover:text-white"
               >
                 GitHub
