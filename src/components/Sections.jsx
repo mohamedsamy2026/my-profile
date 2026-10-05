@@ -91,7 +91,7 @@ export const WhatIDo = ({ t }) => (
   </Sec>
 );
 
-export const Skills = ({ t }) => (
+export const Skills = ({ t, theme }) => (
   <Sec id="skills" title={`3 — ${t.skills}`} alt>
     <div
       dir="ltr"
@@ -103,7 +103,11 @@ export const Skills = ({ t }) => (
             key={i}
             className="card flex items-center gap-3 whitespace-nowrap !rounded-xl px-5 py-4"
           >
-            <img src={s.icon} alt="" className="h-8 w-8 object-contain" />
+            <img
+              src={s.icon || (theme === "dark" ? s.iconDark : s.iconLight)}
+              alt=""
+              className="h-8 w-8 object-contain"
+            />{" "}
             <span className="text-sm font-semibold">{s.name}</span>
           </div>
         ))}
@@ -226,43 +230,21 @@ export const Journey = ({ t }) => (
   </Sec>
 );
 
-export const Testimonials = ({ t, lang }) => {
-  const [i, setI] = useState(0);
-  useEffect(() => {
-    const id = setInterval(
-      () => setI((x) => (x + 1) % testimonials.length),
-      5000,
-    );
-    return () => clearInterval(id);
-  }, []);
-  return (
-    <Sec id="testimonials" title={`07 — ${t.testi}`} alt>
-      <div className="grid gap-4 md:grid-cols-3">
-        {testimonials.map((x, k) => (
-          <figure
-            key={k}
-            className={`card rv p-6 ${k === i ? "border-ac" : "max-md:hidden"} ${k === i ? "max-md:block" : ""}`}
-          >
-            <span className="text-3xl text-ac">“</span>
-            <blockquote className="text-mu">{x.text[lang]}</blockquote>
-            <figcaption className="mt-4 text-sm">
-              <b>{x.name[lang]}</b>
-              <br />
-              <span className="text-mu">{x.role[lang]}</span>
-            </figcaption>
-          </figure>
-        ))}
-      </div>
-      <div className="mt-5 flex justify-center gap-2 md:hidden">
-        {testimonials.map((_, k) => (
-          <button
-            key={k}
-            onClick={() => setI(k)}
-            aria-label={`Testimonial ${k + 1}`}
-            className={`h-2 rounded-full ${k === i ? "w-6 bg-ac" : "w-2 bg-bd"}`}
-          />
-        ))}
-      </div>
-    </Sec>
-  );
-};
+export const Testimonials = ({ t, lang }) => (
+  <Sec id="testimonials" title={`7 — ${t.testi}`} alt>
+    <div className="grid gap-4 md:grid-cols-3">
+      {testimonials.map((x, k) => (
+        <figure key={k} className="card rv p-6 cursor-pointer">
+          <span className="text-[30px] text-ac">“</span>
+
+          <blockquote className="text-mu">{x.text[lang]}</blockquote>
+
+          <figcaption className="mt-4 text-sm flex flex-col gap-1">
+            <b>{x.name[lang]}</b>
+            <span className="text-mu">{x.role[lang]}</span>
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+  </Sec>
+);

@@ -8,7 +8,11 @@ export default [
   { name: 'jQuery', icon: '/assets/Skills/jQuery.svg' },
   { name: 'SASS', icon: '/assets/Skills/Sass.svg' },
   { name: 'Git', icon: '/assets/Skills/Git.svg' },
-  { name: 'GitHub', icon: '/assets/Skills/Github.svg' },
+  {
+    name: 'GitHub',
+    iconDark: '/assets/Skills/github-darkmode.svg',
+    iconLight: '/assets/Skills/github-lightmode.svg'
+  },
   { name: 'Firebase', icon: '/assets/Skills/Firebase.svg' },
   { name: 'Supabase', icon: '/assets/Skills/supabase.svg' },
 ];
