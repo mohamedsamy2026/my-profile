@@ -39,7 +39,7 @@ export default function Footer(p) {
                 target="_blank"
                 rel="noreferrer noopener"
                 aria-label={link.name}
-                className="grid w-10 h-10 flex justify-center items-center rounded-full bg-bd hover:bg-ac hover:-translate-y-[5px] duration-300 text-lg"
+                className="grid w-10 h-10 flex justify-center items-center rounded-full bg-bd hover:bg-ac hover:-translate-y-[5px] hover:text-white duration-300 text-lg"
               >
                 <FontAwesomeIcon icon={link.icon} />
               </a>
