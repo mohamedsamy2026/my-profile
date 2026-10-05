@@ -77,7 +77,7 @@ export default function App() {
     <>
       <div
         aria-hidden
-        className={`fixed inset-0 z-[100] grid place-items-center bg-bg transition-opacity duration-500 ${ready ? "opacity-0 pointer-events-none" : ""}`}
+        className={`fixed inset-0 z-[1000] grid place-items-center bg-bg transition-opacity duration-500 ${ready ? "opacity-0 pointer-events-none" : ""}`}
       >
         <img
           src="/assets/logo.svg"
