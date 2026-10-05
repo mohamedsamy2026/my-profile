@@ -213,7 +213,7 @@ export const Journey = ({ t }) => (
       {t.journeyItems.map((j, i) => (
         <li
           key={i}
-          className="card rv flex items-center gap-4 p-5 cursor-pointer"
+          className="card rv flex items-center justify-between gap-4 p-5 cursor-pointer"
         >
           <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-ac text-[18px] font-bold text-ac">
             {i + 1}

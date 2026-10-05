@@ -89,6 +89,7 @@ body {
 }
 
 :focus-visible {
+  border: none;
   outline: 2px solid var(--ac);
   outline-offset: 3px;
 }

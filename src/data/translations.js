@@ -1,5 +1,3 @@
-// Edit all English / Arabic text here.
-
 const en = {
   nav: [
     'Home',
@@ -76,21 +74,20 @@ const en = {
   contactP: "Have an idea, project, or opportunity? I'd love to hear from you.",
 
   name: 'Name',
+  phone: 'Phone',
   email: 'Email',
   msg: 'Message',
   send: 'Send Message',
 
   errs: {
     name: 'Please enter your name',
+    phone: 'Enter a valid phone number',
     email: 'Enter a valid email',
     msg: 'Message is too short'
   },
+  ok: 'Message received!',
+  okP: "Thanks for reaching out. I'll get back to you by email or phone as soon as possible.",
 
-  ok: 'Message ready!',
-
-  okP: 'Thanks — this is a frontend-only demo; connect a backend in Contact.jsx.',
-
-  again: 'Send another',
 
   loc: 'Beni Suef, Egypt',
 
@@ -173,22 +170,22 @@ const ar = {
   contactP: 'لديك فكرة أو مشروع أو فرصة؟ يسعدني أن أسمع منك.',
 
   name: 'الاسم',
+  phone: "رقم التليفون",
   email: 'البريد الإلكتروني',
   msg: 'الرسالة',
   send: 'إرسال الرسالة',
 
   errs: {
     name: 'من فضلك أدخل اسمك',
+    phone: 'اكتب رقم تليفون صحيح',
     email: 'أدخل بريداً صحيحاً',
     msg: 'الرسالة قصيرة جداً'
   },
 
-  ok: 'تم تجهيز رسالتك!',
-
-  okP: 'شكراً — هذا نموذج للواجهة فقط، اربطه بخادم من ملف Contact.jsx.',
-
-  again: 'إرسال رسالة أخرى',
-
+  // عربي
+  ok: 'وصلتني رسالتك!',
+  okP: 'شكراً لتواصلك، هرد عليك على الإيميل أو الرقم اللي كتبته في أقرب وقت.',
+  
   loc: 'بني سويف، مصر',
 
   rights: '© 2026 محمد سامي. جميع الحقوق محفوظة.'
