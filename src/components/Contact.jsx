@@ -48,8 +48,12 @@ export default function Contact({ t }) {
   const [f, setF] = useState({ name: "", email: "", phone: "", msg: "" });
   const [err, setErr] = useState({});
   const [done, setDone] = useState(false);
+  // اتغير
+  const [sending, setSending] = useState(false);
+  const [sendErr, setSendErr] = useState(false);
 
-  const submit = (e) => {
+  // اتغير
+  const submit = async (e) => {
     e.preventDefault();
     const er = {};
     if (f.name.trim().length < 2) er.name = t.errs.name;
@@ -58,7 +62,27 @@ export default function Contact({ t }) {
     if (!/^\d{8,15}$/.test(f.phone.replace(/[\s-]/g, "")))
       er.phone = t.errs.phone;
     setErr(er);
-    if (!Object.keys(er).length) setDone(true);
+    if (Object.keys(er).length) return;
+
+    setSending(true);
+    setSendErr(false);
+    try {
+      const res = await fetch(
+        "https://ddznwkmykrwpljsozkny.supabase.co/functions/v1/send-contact",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(f),
+        },
+      );
+      const data = await res.json();
+      if (data.success) setDone(true);
+      else setSendErr(true);
+    } catch {
+      setSendErr(true);
+    } finally {
+      setSending(false);
+    }
   };
 
   const field = (k, label, area) => {
@@ -154,8 +178,17 @@ export default function Contact({ t }) {
               {field("phone", t.phone)}
               {field("email", t.email)}
               {field("msg", t.msg, true)}
-              <button className="btn btn-p w-full justify-center py-3.5 active:translate-y-0">
-                {t.send}
+              {/* اتغير */}
+              {sendErr && (
+                <p role="alert" className="text-sm text-red-500">
+                  حصلت مشكلة في الإرسال، جرب تاني أو كلمني واتساب.
+                </p>
+              )}
+              <button
+                disabled={sending}
+                className="btn btn-p w-full justify-center py-3.5 active:translate-y-0 disabled:opacity-60"
+              >
+                {sending ? "..." : t.send}
               </button>
             </form>
           )}

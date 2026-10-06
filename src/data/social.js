@@ -3,7 +3,7 @@ import {
   faLinkedin,
   faFacebook,
   faInstagram,
-  faXTwitter 
+  faXTwitter
 } from "@fortawesome/free-brands-svg-icons";
 
 export default {
@@ -21,16 +21,16 @@ export default {
       icon: faLinkedin,
     },
     {
-      url: "https://www.facebook.com/MohamedSamym/",
+      url: "https://www.facebook.com/mohamedsamy.dev/",
       icon: faFacebook,
     },
     {
-      url: "https://www.instagram.com/moh.amedweb/",
+      url: "https://www.instagram.com/mohamed_samy_web/",
       icon: faInstagram,
     },
     {
       url: "https://x.com/mohamedsamy_web",
-      icon: faXTwitter ,
+      icon: faXTwitter,
     },
   ],
 };
