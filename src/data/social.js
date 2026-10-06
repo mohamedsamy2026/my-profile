@@ -17,7 +17,7 @@ export default {
       icon: faGithub,
     },
     {
-      url: "https://www.linkedin.com/in/mohamed-samy-057620340/",
+      url: "https://www.linkedin.com/in/mohamedsamy-dev/",
       icon: faLinkedin,
     },
     {
