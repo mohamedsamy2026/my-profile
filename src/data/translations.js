@@ -1,4 +1,7 @@
 const en = {
+  sendFail: "Something went wrong. Please try again or contact me on WhatsApp.",
+  sending: "Sending...",
+
   nav: [
     'Home',
     'About',
@@ -96,6 +99,8 @@ const en = {
 
 
 const ar = {
+  sendFail: "حصلت مشكلة في الإرسال، جرب تاني أو كلمني واتساب.",
+  sending: "جاري الإرسال...",
   nav: [
     'الرئيسية',
     'نبذة',
@@ -185,7 +190,7 @@ const ar = {
   // عربي
   ok: 'وصلتني رسالتك!',
   okP: 'شكراً لتواصلك، هرد عليك على الإيميل أو الرقم اللي كتبته في أقرب وقت.',
-  
+
   loc: 'بني سويف، مصر',
 
   rights: '© 2026 محمد سامي. جميع الحقوق محفوظة.'

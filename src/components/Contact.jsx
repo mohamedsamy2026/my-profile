@@ -16,6 +16,7 @@ const contactItems = [
     icon: faPhone,
     text: social.phone,
     href: `tel:${social.phone}`,
+    external: true,
   },
   {
     icon: faWhatsapp,
@@ -32,7 +33,8 @@ const contactItems = [
   {
     icon: faEnvelope,
     text: social.email,
-    href: `mailto:${social.email}`,
+    href: `https://mail.google.com/mail/?view=cm&to=${social.email}`,
+    
   },
 
   {
@@ -48,7 +50,6 @@ export default function Contact({ t }) {
   const [f, setF] = useState({ name: "", email: "", phone: "", msg: "" });
   const [err, setErr] = useState({});
   const [done, setDone] = useState(false);
-  // اتغير
   const [sending, setSending] = useState(false);
   const [sendErr, setSendErr] = useState(false);
 
@@ -181,14 +182,14 @@ export default function Contact({ t }) {
               {/* اتغير */}
               {sendErr && (
                 <p role="alert" className="text-sm text-red-500">
-                  حصلت مشكلة في الإرسال، جرب تاني أو كلمني واتساب.
+                  {t.sendFail}
                 </p>
               )}
               <button
                 disabled={sending}
                 className="btn btn-p w-full justify-center py-3.5 active:translate-y-0 disabled:opacity-60"
               >
-                {sending ? "..." : t.send}
+                {sending ? t.sending : t.send}{" "}
               </button>
             </form>
           )}
