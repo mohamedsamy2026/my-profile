@@ -18,9 +18,6 @@ Deno.serve(async (req) => {
     try {
         const { name, phone, email, msg } = await req.json();
 
-        if (!name || !phone || !email || !msg) return json({ error: "Missing fields" }, 400);
-        if (msg.length > 2000 || name.length > 100) return json({ error: "Too long" }, 400);
-
         const token = Deno.env.get("TELEGRAM_BOT_TOKEN");
         const chatId = Deno.env.get("TELEGRAM_CHAT_ID");
 
