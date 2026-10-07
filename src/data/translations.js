@@ -21,7 +21,7 @@ const en = {
   tag: 'I turn ideas into modern digital experiences.',
 
   work: 'View My Work',
-  talk: "Let's Talk",
+  talk: "Download CV",
   based: 'Beni Suef, Egypt',
 
   aboutT: 'Building modern web experiences with clean code and great design.',
@@ -120,7 +120,7 @@ const ar = {
   tag: 'أحوّل الأفكار إلى تجارب واقعيه حديثة.',
 
   work: 'شاهد أعمالي',
-  talk: 'تواصل معي',
+  talk: "تحميل السيرة الذاتية",
   based: 'بني سويف، مصر',
 
   aboutT: 'أبني تجارب ويب حديثة بكود نظيف وتصميم متقن.',

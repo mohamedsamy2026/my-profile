@@ -1,6 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight, faLocationDot } from "@fortawesome/free-solid-svg-icons";
-
+import {
+  faArrowRight,
+  faLocationDot,
+  faDownload,
+} from "@fortawesome/free-solid-svg-icons";
 const code = [
   "const dev = {",
   "  responsive: true,",
@@ -33,8 +36,13 @@ export default function Hero({ t }) {
             <a href="#projects" className="btn btn-p">
               {t.work} <FontAwesomeIcon icon={faArrowRight} />
             </a>
-            <a href="#contact" className="btn border border-2 border-red-500">
+            <a
+              href="/Mohamed_Samy_CV.pdf"
+              download="Mohamed_Samy_CV.pdf"
+              className="btn border border-2 border-red-500"
+            >
               {t.talk}
+              <FontAwesomeIcon icon={faDownload} />
             </a>
           </div>
           <p className="mt-6 text-[16px] text-mu font-bold">
