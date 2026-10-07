@@ -44,7 +44,7 @@ const contactItems = [
 ];
 
 const pill =
-  "flex w-full max-w-xs items-center gap-3 rounded-lg bg-ac px-4 py-3 font-medium text-white";
+  "flex w-full sm:max-w-xs items-center gap-3 rounded-lg bg-ac px-4 py-3 font-medium text-white";
 
 export default function Contact({ t }) {
   const [f, setF] = useState({ name: "", email: "", phone: "", msg: "" });
@@ -120,7 +120,7 @@ export default function Contact({ t }) {
 
   return (
     <section id="contact" className="py-20">
-      <div className="mx-auto grid max-w-6xl items-start  gap-12 px-5 lg:grid-cols-2">
+      <div className="mx-auto grid max-w-6xl items-start  gap-12 px-5 md:grid-cols-2">
         <div className="rv">
           <h2 className="text-3xl font-extrabold sm:text-4xl">{t.contactT}</h2>
           <p className="mt-3 max-w-md text-mu">{t.contactP}</p>
